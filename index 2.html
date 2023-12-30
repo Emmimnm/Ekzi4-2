@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+</head>
+<body>
+
+<input class="num" type="text" value="" placeholder="число">
+<input class="num" type="text" value="" placeholder="число"> 
+<input class="num" type="text" value="" placeholder="число">
+<button id="task">Enter</button>
+<p id="result"></p>
+
+<script>
+document.getElementById('task').addEventListener('click', function() {
+    // cv
+    var numInputs = document.querySelectorAll('.num');
+
+    var sum = 0;
+    
+
+    numInputs.forEach(function(input) {
+
+        var inputValue = parseFloat(input.value);
+        
+
+        if (!isNaN(inputValue)) {
+
+            sum += inputValue;
+        }
+    });
+    
+
+    document.getElementById('result').textContent = 'Сума: ' + sum;
+});
+</script>
+
+</body>
+</html>
